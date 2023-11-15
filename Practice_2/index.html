@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Button</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>This is maily for practicing Button functionality</h1>
+        <!-- Button 1 -->
+        <button onclick="document.body.style.backgroundColor = '#BEE5B0'">
+          Make me Green
+        </button>
+        <!-- Button 2 -->
+        <button onclick="pinkButton()">Make me Pink</button>
+
+        <!-- Button 3 -->
+        <button id="blue-btn">Make me Blue</button>
+
+        <!-- Button 4 -->
+        <button id="default-btn">Default White</button>
+
+        <!-- Button 5 -->
+        <button id="gray-btn">Make me gray</button>
+
+        <!-- Button 6 -->
+        <button id="tomato-btn">Make me Tomato</button>
+
+        <!-- Button 7 -->
+        <button id="skin-color-btn">Skin Color</button>
+      </section>
+    </main>
+
+    <!--  -->
+    <script>
+      // Button 2
+      function pinkButton() {
+        document.body.style.backgroundColor = "#CCCCFF";
+      }
+
+      //   Button 3
+      var blueButton = document.getElementById("blue-btn");
+      blueButton.onclick = function blue() {
+        document.body.style.backgroundColor = "#73A5C6";
+      };
+
+      //   Button 4
+      var defaultColor = document.getElementById("default-btn");
+      defaultColor.onclick = default_color;
+      function default_color() {
+        document.body.style.backgroundColor = "#FEFCFF";
+      }
+
+      //   Button 5
+      var grayColor = document.getElementById("gray-btn");
+      grayColor.addEventListener("click", gray);
+      function gray() {
+        document.body.style.backgroundColor = "#CBC1AE";
+      }
+
+      //   Button 6
+      document.getElementById("tomato-btn").onclick = function tomato() {
+        document.body.style.backgroundColor = "#FF6347";
+      };
+
+      //   Button 7
+      document
+        .getElementById("skin-color-btn")
+        .addEventListener("click", function skin() {
+          document.body.style.backgroundColor = "#664D48";
+        });
+    </script>
+  </body>
+</html>
