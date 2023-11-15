@@ -1,0 +1,9 @@
+h1 {
+  background-color: aliceblue;
+  color: slategrey;
+}
+
+#place-title {
+  background-color: rgb(95, 177, 248);
+  color: rgb(0, 0, 0);
+}

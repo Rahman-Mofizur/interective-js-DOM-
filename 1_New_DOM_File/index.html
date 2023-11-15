@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Learning Platform</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <style>
+      .fav-fruits li {
+        color: brown;
+        background-color: lightcyan;
+      }
+      li {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>I am learning DOM</h1>
+    </header>
+    <main id="main-container">
+      <section class="fav-fruits">
+        <h1>My favourite fruits are:</h1>
+        <ul id="fruit-container">
+          <li>Orange</li>
+          <li>Banana</li>
+          <li>Mango</li>
+          <li>Grapes</li>
+          <li>Dates</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="place-title">My favourite places on Earth:</h1>
+        <ul id="countryList">
+          <li class="countries" id="country-uae">UAE</li>
+          <li class="countries">Saudi Arabia</li>
+          <li class="countries">Malaysia</li>
+          <li class="countries">Middle Asia</li>
+          <li class="countries">Pakistan</li>
+        </ul>
+      </section>
+      <section>
+        <h1>My Car Collection:</h1>
+        <ul id="car-collection">
+          <li>Toyota</li>
+          <li>Marcedes</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- js -->
+    <!-- 2 -->
+    <script src="js/NodeList.js"></script>
+    <!-- 3 -->
+    <script src="js/append.js"></script>
+    <!-- 4 -->
+    <script src="js/appendASection.js"></script>
+    <!-- Styles should be added in last -->
+    <!-- 1 -->
+    <script src="js/styling.js"></script>
+
+    <script>
+      console.log("More SUCCESS!");
+      var liCollection = document.getElementsByTagName("li");
+      //   console.log(liCollection);
+      for (let li of liCollection) {
+        // console.log(li);
+        console.log(li.innerText);
+      }
+    </script>
+  </body>
+</html>
