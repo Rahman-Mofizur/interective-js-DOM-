@@ -11,10 +11,16 @@
     <main>
       <section>
         <h1>Which one will you buy?</h1>
-
         <h2 id="first-choice">Your 1st choice:</h2>
         <h2 id="second-choice">Your 2nd choice:</h2>
         <h2>Your Full Name: <span id="full-name">uigygf</span></h2>
+
+        <div id="text-container">
+          <p>Add your comment here:</p>
+        </div>
+        <textarea id="text-area" cols="60" rows="10"></textarea>
+        <br /><br />
+        <button id="post">Post it</button><br /><br />
 
         <button onclick="carMarcedes()">Marcedes S-Class</button>
         <button id="car-toyota">Toyota Land Cruiser</button>
@@ -50,6 +56,16 @@
           var inputField = document.getElementById("input-name");
           inputField.value = "";
         }); // Use value for the Inner text of an input field
+
+      // Textarea comment
+      document.getElementById("post").addEventListener("click", function () {
+        var textBox = document.getElementById("text-area");
+        var textDiv = document.getElementById("text-container");
+        var para = document.createElement("p");
+        para.innerText = textBox.value;
+        textDiv.appendChild(para);
+        textBox.value = "";
+      });
     </script>
   </body>
 </html>
