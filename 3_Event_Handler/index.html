@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Which one will you buy?</h1>
+
+        <h2 id="first-choice">Your 1st choice:</h2>
+        <h2 id="second-choice">Your 2nd choice:</h2>
+        <h2>Your Full Name: <span id="full-name">uigygf</span></h2>
+
+        <button onclick="carMarcedes()">Marcedes S-Class</button>
+        <button id="car-toyota">Toyota Land Cruiser</button>
+        <input id="input-name" type="text" placeholder="Enter your name" />
+        <button id="update-button">Update</button>
+      </section>
+    </main>
+
+    <!-- Script -->
+    <script>
+      //    Handle Status using oncick
+      function carMarcedes() {
+        document.getElementById("first-choice").innerText =
+          "Your 1st choice: Marcedes S-Class";
+      }
+
+      //  Handle Status using addEventListener
+      document
+        .getElementById("car-toyota")
+        .addEventListener("click", function catchSecondChoice() {
+          document.getElementById("second-choice").innerText =
+            "Your 2nd choice: Toyota Land Cruiser";
+        });
+
+      // Name Update
+      document
+        .getElementById("update-button")
+        .addEventListener("click", function getName() {
+          document.getElementById("full-name").innerText =
+            document.getElementById("input-name").value;
+
+          // Input field blanck korar jonno...
+          var inputField = document.getElementById("input-name");
+          inputField.value = "";
+        }); // Use value for the Inner text of an input field
+    </script>
+  </body>
+</html>
