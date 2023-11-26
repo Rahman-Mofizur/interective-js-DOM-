@@ -25,9 +25,6 @@
         <!-- Button 6 [with ID Onclick Type-3] -->
         <button id="tomato-btn">Make me Tomato</button>
 
-        <!-- Button 5 [with ID addEventListener Type- 1] -->
-        <button id="gray-btn">Make me gray</button>
-
         <!-- Button 7 [with ID addEventListener Type- 2] -->
         <button id="skin-color-btn">Skin Color</button>
       </section>
@@ -35,37 +32,30 @@
 
     <!--  -->
     <script>
-      // Button 2
+      // Button 2   IMPORTANT!
       function pinkButton() {
         document.body.style.backgroundColor = "#CCCCFF";
       }
 
-      //   Button 3
+      //   Button 3  [SAME AS bUTTON 6]    IMPORTANT!
       var blueButton = document.getElementById("blue-btn");
       blueButton.onclick = function blue() {
         document.body.style.backgroundColor = "#73A5C6";
       };
 
-      //   Button 4
+      //   Button 4  [Similar to Button 3]
       var defaultColor = document.getElementById("default-btn");
       defaultColor.onclick = default_color;
       function default_color() {
         document.body.style.backgroundColor = "#FEFCFF";
       }
 
-      //   Button 5
-      var grayColor = document.getElementById("gray-btn");
-      grayColor.addEventListener("click", gray);
-      function gray() {
-        document.body.style.backgroundColor = "#CBC1AE";
-      }
-
-      //   Button 6
+      //   Button 6    IMPORTANT!
       document.getElementById("tomato-btn").onclick = function tomato() {
         document.body.style.backgroundColor = "#FF6347";
       };
 
-      //   Button 7
+      //   Button 7   IMPORTANT!
       document
         .getElementById("skin-color-btn")
         .addEventListener("click", function skin() {

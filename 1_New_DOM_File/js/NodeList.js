@@ -1,7 +1,7 @@
 // 5. NodeList
 var fruitContainer = document.getElementById("fruit-container");
 console.log(
-  "This are the Child Nodes of Fruit Container: ",
+  "Thiese are the Child Nodes of Fruit Container: ",
   fruitContainer.childNodes
 );
 

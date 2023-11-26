@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Document</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1 id="fav-sura-title">My favourite Suras are:</h1>
+        <ul id="sura-list">
+          <li>Sura Al-ala</li>
+          <li>Sura Ad-duha</li>
+        </ul>
+      </section>
+      <section>
+        <h1>This is for the Background color</h1>
+        <button onclick="btnGreen()">Make Green</button>
+        <button id="btn-blue">Make Blue</button>
+        <button id="btn-purple">Make Purple</button>
+      </section>
+    </main>
+
+    <script>
+      // 1. Sura Lists
+      var suraList = document.querySelectorAll("#sura-list");
+      for (sura of suraList) {
+        console.log(sura);
+      }
+
+      // 2. Hover Effect
+      document
+        .getElementById("fav-sura-title")
+        .setAttribute("title", "This is Heading of Favourite Sura.");
+
+      // 3. Adding another Sura by Append
+      var favSuraLists = document.getElementById("sura-list");
+      var newSura = document.createElement("li");
+      newSura.innerText = "Sura Ikhlas";
+      favSuraLists.appendChild(newSura);
+
+      //   Give the Section a style
+      var sections = document.querySelectorAll("section");
+      for (section of sections) {
+        section.style.border = "2px solid blue";
+        section.style.marginbottom = "10px";
+        section.style.borderRadius = "9px";
+        section.style.paddingLeft = "10px";
+        section.style.paddingBottom = "10px";
+      }
+
+      //   Button Green
+      function btnGreen() {
+        document.body.style.background = "#BEE5B0";
+      }
+
+      // Button Blue
+      document.getElementById("btn-blue").onclick = function () {
+        document.body.style.background = "#73A5C6";
+      };
+
+      // Button Purple
+      document
+        .getElementById("btn-purple")
+        .addEventListener("click", function () {
+          document.body.style.background = "#CCCCFF";
+        });
+    </script>
+  </body>
+</html>
