@@ -20,6 +20,16 @@
         <button id="btn-blue">Make Blue</button>
         <button id="btn-purple">Make Purple</button>
       </section>
+
+      <section>
+        <h1>Enter Your Information:</h1>
+
+        <h2>Name: <input type="text" id="inputed-name" /></h2>
+        <button type="submit-name">Submit</button>
+        <h2>Your Name: <span id="given-name">asdfasdf</span></h2>
+
+        <!-- <input type="text" id="update-field" /><button>Update</button> -->
+      </section>
     </main>
 
     <script>
@@ -43,11 +53,11 @@
       //   Give the Section a style
       var sections = document.querySelectorAll("section");
       for (section of sections) {
-        section.style.border = "2px solid blue";
-        section.style.marginbottom = "10px";
+        section.style.border = "2px solid #CCCBEF";
+        section.style.marginBottom = "20px";
         section.style.borderRadius = "9px";
-        section.style.paddingLeft = "10px";
-        section.style.paddingBottom = "10px";
+        section.style.paddingLeft = "15px";
+        section.style.paddingBottom = "20px";
       }
 
       //   Button Green
@@ -65,6 +75,14 @@
         .getElementById("btn-purple")
         .addEventListener("click", function () {
           document.body.style.background = "#CCCCFF";
+        });
+
+      // Name Field Work
+      document
+        .getElementById("submit-name")
+        .addEventListener("click", function sdfgd() {
+          document.getElementById("given-name").innerText =
+            document.getElementById("inputed-name").value;
         });
     </script>
   </body>

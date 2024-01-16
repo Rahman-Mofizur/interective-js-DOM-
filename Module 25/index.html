@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 25</title>
+  </head>
+  <style>
+    #best-frnd {
+      background-color: aquamarine;
+    }
+  </style>
+  <body>
+    <header>
+      <!-- My Names -->
+      <div id="names" class="namesOfMine">
+        <h1 id="myNameList">This is a list of my Name:</h1>
+        <ul>
+          <li>Eiman</li>
+          <li>Mofiz</li>
+          <li>Saimon</li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <!-- Fruits -->
+      <div class="fruits-container">
+        <h1>This is a Fruits Container</h1>
+        <ul>
+          <li class="fruits">Mango</li>
+          <li class="fruits">Apple</li>
+          <li class="fruits">Orange</li>
+        </ul>
+      </div>
+
+      <!-- Friends -->
+      <div class="friends">
+        <h1>This is list of friends:</h1>
+        <ul>
+          <li id="best-frnd" class="best-friend close-one">Mashraffee</li>
+          <li>Dihan</li>
+          <li>Junied</li>
+          <li>Mohin</li>
+        </ul>
+      </div>
+
+      <section class="mobile">
+        <h1>This is Mobile Section</h1>
+        <ul>
+          <li>Samsung</li>
+          <li>oppo</li>
+          <li>Huawei</li>
+        </ul>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script>
+      var liCollection = document.getElementsByTagName("li");
+      for (li of liCollection) {
+        console.log(li);
+        console.log(li.innerText);
+      }
+
+      var listOfMyNames = document.getElementById("myNameList");
+      listOfMyNames.innerText = "My names are: ";
+      listOfMyNames.style.color = "blue";
+
+      console.log(
+        "My Names Class = ",
+        document.getElementById("names").classList
+      );
+
+      //   Fruits
+      var fruitBox = document.getElementsByClassName("fruits-container");
+      console.log(fruitBox);
+
+      var fruitList = document.querySelectorAll(".fruits");
+      for (li of fruitList) {
+        console.log("This is the Fruit List= ", li.innerText);
+      }
+
+      //   Friends
+      var classAttributeOfMash = document.getElementById("best-frnd");
+      console.log(
+        "My Best Friend CLASS NAMES = ",
+        classAttributeOfMash.getAttribute("class")
+      );
+
+      //   All div
+      var divList = document.querySelectorAll("div");
+      for (div of divList) {
+        div.style.border = "5px solid darkGray";
+        div.style.borderRadius = "12px";
+        div.style.marginBottom = "10px";
+        div.style.backgroundColor = "lightgray";
+        div.style.paddingLeft = "10px";
+      }
+
+      // Mobiles
+      var mobileList = document.querySelector(".mobile");
+      console.log("Mobile List= ", mobileList);
+
+      var mobiles = document.getElementsByClassName("mobile");
+      console.log("Mobile List Using GetEliment= ", mobiles);
+    </script>
+  </body>
+</html>
